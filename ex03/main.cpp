@@ -1,16 +1,15 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 #include "PresidentialPardonForm.hpp"
-#include "ShrubberyCreationForm.hpp"
 
 
 int main()
 {
     try
     {
-        Bureaucrat solder1("mehdi", 3); 
+        Bureaucrat solder1("mehdi", 150); 
 
-        ShrubberyCreationForm miaw("house");
+        PresidentialPardonForm miaw("house");
         solder1.signForm(miaw);
         miaw.execute(solder1);
 

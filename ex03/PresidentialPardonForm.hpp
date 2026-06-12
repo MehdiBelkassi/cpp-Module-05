@@ -20,14 +20,14 @@ class PresidentialPardonForm : public AForm
         PresidentialPardonForm& operator=(PresidentialPardonForm &other);
         ~PresidentialPardonForm();
 
-        // class GradeTooHighException : public std::exception
-        // {
-        //     const char* what() const throw();
-        // };
-        // class GradeTooLowException : public std::exception
-        // {
-        //     const char* what() const throw();
-        // };
+        class GradeTooHighException : public std::exception
+        {
+            const char* what() const throw();
+        };
+        class GradeTooLowException : public std::exception
+        {
+            const char* what() const throw();
+        };
 
         void execute(Bureaucrat const & executor) const;
 };

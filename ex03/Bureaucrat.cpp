@@ -81,8 +81,6 @@ void Bureaucrat::executeForm(AForm const & form) const
 	{
 		std::cerr << name << " couldn't execute " << form.getName() << " because " << ex.what() << "." << std::endl;
 	}
-	
-
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
