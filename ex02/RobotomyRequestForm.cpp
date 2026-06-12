@@ -30,15 +30,15 @@ RobotomyRequestForm::~RobotomyRequestForm()
     std::cout << "PresidentialPardonForm Destructor called" << std::endl;
 }
 
-const char* RobotomyRequestForm::GradeTooHighException::what() const throw()
-{
-    return "The Grade is too High and the robotomy failed...";
-}
+// const char* RobotomyRequestForm::GradeTooHighException::what() const throw()
+// {
+//     return "The Grade is too High and the robotomy failed...";
+// }
 
-const char* RobotomyRequestForm::GradeTooLowException::what() const throw()
-{
-    return "The Grade is too low and the robotomy failed...";
-}
+// const char* RobotomyRequestForm::GradeTooLowException::what() const throw()
+// {
+//     return "The Grade is too low and the robotomy failed...";
+// }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
@@ -46,7 +46,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
         throw AForm::FormIsnotSignedException();
 
     if (executor.getGrade() > this->get_grade_to_sign() )
-        throw RobotomyRequestForm::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 
     std::cout << target << " has been robotomized successfully 50% of the time" << std::endl;
 }

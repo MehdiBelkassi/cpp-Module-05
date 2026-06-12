@@ -8,7 +8,7 @@ int main()
 {
     try
     {
-        Bureaucrat solder1("mehdi", 3); 
+        Bureaucrat solder1("mehdi", 99); 
 
         ShrubberyCreationForm miaw("house");
         solder1.signForm(miaw);

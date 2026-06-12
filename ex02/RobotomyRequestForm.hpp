@@ -15,15 +15,6 @@ class RobotomyRequestForm : public AForm
         RobotomyRequestForm& operator=(RobotomyRequestForm &other);
         ~RobotomyRequestForm();
 
-        class GradeTooHighException : public std::exception
-        {
-            const char* what() const throw();
-        };
-        class GradeTooLowException : public std::exception
-        {
-            const char* what() const throw();
-        };
-
         void execute(Bureaucrat const & executor) const;
 };
 

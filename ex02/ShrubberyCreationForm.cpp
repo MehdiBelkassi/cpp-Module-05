@@ -30,15 +30,15 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
     std::cout << "ShrubberyCreationForm Destructor called" << std::endl;
 }
 
-const char* ShrubberyCreationForm::GradeTooHighException::what() const throw()
-{
-    return "The Grade is too High";
-}
+// const char* ShrubberyCreationForm::GradeTooHighException::what() const throw()
+// {
+//     return "The Grade is too High";
+// }
 
-const char* ShrubberyCreationForm::GradeTooLowException::what() const throw()
-{
-    return "The Grade is too Low";
-}
+// const char* ShrubberyCreationForm::GradeTooLowException::what() const throw()
+// {
+//     return "The Grade is too  dddddLow";
+// }
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
@@ -46,7 +46,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         throw AForm::FormIsnotSignedException();
 
     if (executor.getGrade() > this->get_grade_to_sign() )
-        throw ShrubberyCreationForm::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 
     std::ofstream file(target + "_shrubbery");
     file <<

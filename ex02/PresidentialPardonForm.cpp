@@ -30,15 +30,15 @@ PresidentialPardonForm::~PresidentialPardonForm()
     std::cout << "PresidentialPardonForm Destructor called" << std::endl;
 }
 
-const char* PresidentialPardonForm::GradeTooHighException::what() const throw()
-{
-    return "Unfortunatly, The Grade has is too High and he has not been pardoned by Zaphod Beeblebrox";
-}
+// const char* PresidentialPardonForm::GradeTooHighException::what() const throw()
+// {
+//     return "Unfortunatly, The Grade has is too High and he has not been pardoned by Zaphod Beeblebrox";
+// }
 
-const char* PresidentialPardonForm::GradeTooLowException::what() const throw()
-{
-    return "Unfortunatly, The Grade has is too Low and he has not been pardoned by Zaphod Beeblebrox";
-}
+// const char* PresidentialPardonForm::GradeTooLowException::what() const throw()
+// {
+//     return "Unfortunatly, The Grade has is too Low and he has not been pardoned by Zaphod Beeblebrox";
+// }
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
@@ -46,7 +46,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const
         throw AForm::FormIsnotSignedException();
 
     if (executor.getGrade() > this->get_grade_to_sign() )
-        throw PresidentialPardonForm::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 
     std::cout << target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

@@ -17,15 +17,6 @@ class ShrubberyCreationForm : public AForm
         ShrubberyCreationForm& operator=(ShrubberyCreationForm &other);
         ~ShrubberyCreationForm();
 
-        class GradeTooHighException : public std::exception
-        {
-            const char* what() const throw();
-        };
-        class GradeTooLowException : public std::exception
-        {
-            const char* what() const throw();
-        };
-
         void execute(Bureaucrat const & executor) const;
 };
 
