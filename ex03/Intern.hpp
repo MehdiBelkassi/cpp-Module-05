@@ -12,7 +12,13 @@
 class Intern
 {
     public:
-        void makeForm(std::string form, std::string target);
+        Intern();
+        Intern(std::string Force_Orthodox_Canonical_Form);
+        Intern(const Intern& other);
+        Intern& operator=(const Intern& other);
+        ~Intern();
+
+        AForm* makeForm(std::string form, std::string target);
 };
 
 #endif
