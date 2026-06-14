@@ -3,9 +3,12 @@
 #include "PresidentialPardonForm.hpp"
 #include "Intern.hpp"
 
+
+
 int main()
 {
-    Intern d;
-    
-
+    Intern someRandomIntern;
+    AForm* rrf;
+    rrf = someRandomIntern.makeForm("PresidentialPa5rdonForm", "Bender");
+    rrf->getName();
 }

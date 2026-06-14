@@ -5,9 +5,12 @@
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 
-
+class AForm;
 
 class Intern
 {
@@ -17,6 +20,7 @@ class Intern
         Intern(const Intern& other);
         Intern& operator=(const Intern& other);
         ~Intern();
+
 
         AForm* makeForm(std::string form, std::string target);
 };
