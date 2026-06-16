@@ -2,7 +2,7 @@
 #include "Bureaucrat.hpp"
 
 
-Form::Form() : name("Mehdi"), is_signed(false), grade_to_sign(150), grade_to_execute(150)
+Form::Form() : name("None"), is_signed(false), grade_to_sign(150), grade_to_execute(150)
 {
     std::cout << "Form Default constructor called" << std::endl;
 }
@@ -10,6 +10,7 @@ Form::Form() : name("Mehdi"), is_signed(false), grade_to_sign(150), grade_to_exe
 Form::Form(std::string _name, int grade_to_sign, int grade_to_execute)
     :name(_name), grade_to_sign(grade_to_sign), grade_to_execute(grade_to_execute)
     {
+        is_signed = false;
         std::cout << "Form constructor called" << std::endl;
         if (grade_to_sign > 150 || grade_to_execute > 150)
 		    throw Form::GradeTooLowException();

@@ -5,7 +5,7 @@ Bureaucrat::Bureaucrat(): name("none"), grade(1)
     std::cout << "Bureaucrat default constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string _name, int _grade):name(_name), grade(_grade)
+Bureaucrat::Bureaucrat(std::string _name, int _grade): name(_name), grade(_grade)
 {
     std::cout << "Bureaucrat constructor called" << std::endl;
     if (_grade < 1)

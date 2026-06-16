@@ -1,20 +1,22 @@
 #include "Bureaucrat.hpp"
 
-
-
-
 int main()
 {
+    // try 
+    // {
+        // Bureaucrat solder1("mehdi", 1);
+        // solder1.increaseGrade();
+        // std::cout << solder1;
 
-    try
-    {
-        Bureaucrat solder1("mehdi", 2147483647);
-        solder1.decreaseGrade();
-        std::cout << solder1.getGrade() << std::endl;
+        // Bureaucrat solder2("Belkassi", 150);
+        // solder1.decreaseGrade();
+        // std::cout << solder2;
+    // }
+    // catch(std::exception &ex)
+    // {
+        // Bureaucrat::GradeTooHighException ex;
+        // std::cout << ex.what() << std::endl;
+    // }
+    
 
-    }
-    catch(std::exception &ex)
-    {
-        std::cout << ex.what() << std::endl;
-    }
 }

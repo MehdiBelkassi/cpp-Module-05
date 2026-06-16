@@ -1,15 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
@@ -21,8 +11,8 @@ int main()
         Form a = Form("3a9d zawaj", 14, 45);
 
         Bureaucrat solder1 = Bureaucrat("mehdi", 20);
-
         solder1.signForm(a);
+        a.beSigned(solder1);
         // std::cout << a;
     }
     catch(const std::exception& e)
